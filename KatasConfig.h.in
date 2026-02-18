@@ -1,0 +1,3 @@
+// the configured options and settings for Tutorial
+#define Katas_VERSION_MAJOR @Katas_VERSION_MAJOR@
+#define Katas_VERSION_MINOR @Katas_VERSION_MINOR@
