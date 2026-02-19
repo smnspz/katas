@@ -19,7 +19,7 @@ $ cd build/SnailSort
 $ make SnailSort -j 12 # To parallelize
 ```
 
-Your brain will then start farting incontrollably, and there's nothing you can do about it.
+Your brain will then start farting uncontrollably, and there's nothing you can do about it.
 Here's a picture of Heihaci Mishima to motivate you.
 
 ![Heiachi Mishima](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Ftekken%2Fimages%2Fc%2Fc2%2FTK8_Heihachi_Render.jpg%2Frevision%2Flatest%2Fscale-to-width-down%2F350%3Fcb%3D20241001053733%26path-prefix%3Den&f=1&nofb=1&ipt=51c3e0ae6a3fcd93544558107f87a2075fe082698ce4882fec6b4cd9772bd85a)
