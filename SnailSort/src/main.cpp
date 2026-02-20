@@ -8,36 +8,48 @@ using namespace SnailSort;
 int main()
 {
     // Initializations
-    size_t columnIndex, rowIndex;
-    bool hasNext = false;
+    size_t rowIndex = 0u;
+    bool hasNextRow = false;
 
     // Alias to list for better readability
     const auto &list = ThreeByThree;
 
-    for (columnIndex = 0u; columnIndex < list.size(); ++columnIndex)
-    {
-        // Check if it's the last row
-        hasNext = (columnIndex < list.size() - 1);
+    // Always print the first row
+    for (const auto val : list[0]) { std::cout << val << " "; };
 
-        if (!hasNext)
-        {
-            for (rowIndex = list[columnIndex].size() - 1; rowIndex > 0; --rowIndex)
+    // Start main loop
+    for (;;)
+    {
+
+        // Check if another row is available
+        hasNextRow = (rowIndex < list.size() - 1); 
+
+        // Print the last row
+        if (rowIndex == list.size())
+        {   
+            // Traverse last row backwards until we reach first element
+            for (size_t columnIndex = list[rowIndex].size(); columnIndex-- > 0;)
             {
-                std::cout << list[columnIndex][rowIndex];
+                std::cout << list[rowIndex][columnIndex] << " ";
             }
+
+            // Exit
+            break;
         }
         else
         {
-            for (rowIndex = 0u; rowIndex < list[columnIndex].size(); ++rowIndex)
-            {
-                // Once it reaches end of first row, jump to last element of second row
-                std::cout << list[columnIndex][rowIndex];
-            }
+            // TODO: Check if has another row before printing, otherwise it prints the last row's last number, which we don't want
+            // TODO: It should increment the rowIndex, then check if there's another row, then eventually print
+            // Print every row's last number
+            // ++rowIndex;
+            // if (hasNextRow) std::cout << list[rowIndex][list[rowIndex].size() - 1] << " ";
+            if (!hasNextRow) std::cout << "last row" << std::endl;
+            // std::cout << "rowIndex = '" << rowIndex << "'" << std::endl;
         }
-
-        // Print new line
-        std::cout << std::endl;
     }
+
+    // Print new line
+    std::cout << std::endl;
 
     return 0;
 }
