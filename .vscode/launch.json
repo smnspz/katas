@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug SnailSort",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/SnailSort/SnailSort",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "cmake: build"
+        },
+        {
+            "name": "Debug SnailSort (no build)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/SnailSort/SnailSort",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.process.stop-on-exec false",
+                    "ignoreFailures": true
+                }
+            ],
+            "sourceFileMap": {
+                "/Users/rosani/dev/playground/katas": "/Users/rosani/Dev/playground/katas"
+            }
+        }
+    ]
+}

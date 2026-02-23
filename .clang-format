@@ -1,0 +1,17 @@
+---
+# Base on Microsoft coding style
+BasedOnStyle: Microsoft
+
+# Allow short if statements on a single line
+# Options: Never, WithoutElse, OnlyFirstIf, AllIfsAndElse
+# WithoutElse allows: if (condition) statement;
+# but not when there's an else clause
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+
+# You can also allow other short constructs on single lines:
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: None
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: false
